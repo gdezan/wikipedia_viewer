@@ -13,8 +13,12 @@ $(document).ready(function($) {
 					$("#output").append("<p id=\"error\">We could not find the term you searched for.</p>");
 				} else {
 					for (var i = 0; i < 10; i++){
+            		if (data[1][i]==undefined){
+              			break
+            		} else {
 						$("#output").append("<li><p id=\"linkTitle\"><a href="+data[3][i]+" target=\"blank\" >"+data[1][i]+"</a></p><p>"+data[2][i]+"</p></li>");
-					}
+            		}
+				}
 				}
 				$("#searchForm").val('');
 			},

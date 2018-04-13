@@ -1,4 +1,25 @@
 $(document).ready(function($) {
+	anime({
+		targets: ['#logo','#wholeTitle'],
+		translateY: {
+	  		value: 50,
+	  		duration: 1000
+	  	},
+	});
+	anime({
+		targets: ['#whole', 'footer'],
+		opacity: {
+			value: 1,
+	  		duration: 3000
+		}
+	});
+	anime({
+		targets: ['#buttons', 'footer', '#searchForm'],
+		translateY: {
+	  		value: -50,
+	  		duration: 1000
+	  	},
+	});
 	$("#search").click(function(){
 		var searchTerm = $("#searchForm").val();
 		var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerm +"&callback=?";
@@ -19,11 +40,22 @@ $(document).ready(function($) {
 						$("#output").append("<li><p id=\"linkTitle\"><a href="+data[3][i]+" target=\"blank\" >"+data[1][i]+"</a></p><p>"+data[2][i]+"</p></li>");
             		}
 				}
+				anime({
+					targets: 'li',
+					translateY: {
+				  		value: 50,
+				  		duration: 1000
+				  	},
+					opacity: {
+						value: 1,
+				  		duration: 1000
+					}
+				});
 				}
 				$("#searchForm").val('');
 			},
 			error: function(errorMessage){
-				alert("Error");
+				alert("Please Enter a Seach Term");
 			}
 		});
 	});
@@ -32,6 +64,7 @@ $(document).ready(function($) {
 			$("#search").click();
 		}
 	});
+
 });
 $
 

@@ -1,0 +1,57 @@
+body {
+	background-color: #ddd;
+}
+
+footer {
+	font-size: 15px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+a {
+	color: #9e93c1;
+}
+
+#wholeTitle {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 60px;
+	maring: 10px;
+}
+
+#logo {
+	width: 25%;
+}
+
+#whole {
+	margin-top: 30px;
+	text-align: center;
+}
+
+#buttons {
+	margin-top: 30px;
+}
+
+#output {
+	margin-top: 30px;
+	text-align: left;
+}
+
+#linkTitle {
+	font-size: 20px;
+}
+
+#error {
+	text-align: center;
+	font-size: 30px;
+	color: #a02828;
+}
+
+li {
+	list-style-type: none;
+	background-color: #fff;
+	padding: 20px 30px;
+	border-radius: 5px;
+	margin-top: 20px;
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.8);
+	font-family: 'Raleway', sans-serif;
+}

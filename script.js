@@ -44,7 +44,7 @@ $(document).ready(function($) {
             		}
 				}
 				anime({
-					targets: ['li', footer],
+					targets: ['li', 'footer'],
 					translateY: {
 				  		value: 50,
 				  		duration: 1000

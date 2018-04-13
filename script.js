@@ -23,6 +23,7 @@ $(document).ready(function($) {
 	$("#search").click(function(){
 		var searchTerm = $("#searchForm").val();
 		var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerm +"&callback=?";
+		console.log(url);
 		$.ajax({
 			type:"GET",
 			url: url,
@@ -36,6 +37,8 @@ $(document).ready(function($) {
 					for (var i = 0; i < 10; i++){
             		if (data[1][i]==undefined){
               			break
+              		} else if (data[2][i]==''){
+              			$("#output").append("<li><p id=\"linkTitle\"><a href="+data[3][i]+" target=\"blank\" >"+data[1][i]+"</a></p><p>This page will redirect to a more accurate one.</p></li>");
             		} else {
 						$("#output").append("<li><p id=\"linkTitle\"><a href="+data[3][i]+" target=\"blank\" >"+data[1][i]+"</a></p><p>"+data[2][i]+"</p></li>");
             		}
